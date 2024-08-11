@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class strobogrammatic {
 
   static ArrayList<String> numdef(int n, int length) {
     ArrayList<String> result = new ArrayList<String>();
