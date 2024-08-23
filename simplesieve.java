@@ -19,6 +19,8 @@ class simplesieve{
                 System.out.println(i);
             }
         }
+
+     
         input.close();
     }
 }
