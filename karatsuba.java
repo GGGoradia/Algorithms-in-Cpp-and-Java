@@ -1,6 +1,6 @@
 import java.util.*; 
   
-class karatsuba{ 
+class karatsubaasdw{ 
   
     // Find the maximum possible sum in arr[] 
     // such that arr[m] is part of it 
@@ -66,8 +66,6 @@ class karatsuba{
         int n = arr.length; 
         int max_sum = maxSubArraySum(arr, 0, n - 1); 
   
-        System.out.println("Maximum contiguous sum is "
-                           + max_sum); 
+        System.out.println("Maximum contiguous sum is "+ max_sum); 
     } 
 } 
-// This code is contributed by Prerna Saini

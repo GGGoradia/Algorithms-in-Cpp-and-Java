@@ -34,7 +34,6 @@ class strobogrammatic {
     ArrayList<String> result = numdef(n, n);
     return result;
   }
-
   // Driver Code
   public static void main(String[] args) {
     // Print all Strobogrammatic numbers for n = 2
