@@ -15,28 +15,28 @@ vector<int> generate_random_array(int n) {
     return arr;
 }
 
-int brute_force_max_subarray(const vector<int>& arr) {
-    int max_sum = arr[0];
+int kadane_max_subarray(const vector<int>& arr) {
+    int max_current = arr[0];
+    int max_global = arr[0];
     int n = arr.size();
-    for (int i = 0; i < n; ++i) {
-        int current_sum = 0;
-        for (int j = i; j < n; ++j) {
-            current_sum += arr[j];
-            if (current_sum > max_sum) {
-                max_sum = current_sum;
-            }
+
+    for (int i = 1; i < n; ++i) {
+        max_current = max(arr[i], max_current + arr[i]);
+        if (max_current > max_global) {
+            max_global = max_current;
         }
     }
-    return max_sum;
+
+    return max_global;
 }
 
-void run_brute_force(int n) {
+void run_kadane(int n) {
     vector<int> arr = generate_random_array(n);
 
     clock_t start_time = clock();
 
-    cout << "Brute force for n = " << n << ": ";
-    int max_sum = brute_force_max_subarray(arr);
+    cout << "Kadane's Algorithm for n = " << n << ": ";
+    int max_sum = kadane_max_subarray(arr);
 
     clock_t end_time = clock();
     double time_taken = double(end_time - start_time) / CLOCKS_PER_SEC;
@@ -45,10 +45,10 @@ void run_brute_force(int n) {
 }
 
 int main() {
-    vector<int> sizes = {10, 100, 1000,10000,100000};
+    vector<int> sizes = {10, 100, 1000, 10000, 100000};
 
     for (int n : sizes) {
-        run_brute_force(n);
+        run_kadane(n);
         cout << endl;
     }
 
