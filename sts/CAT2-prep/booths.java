@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class booths {
+    @SuppressWarnings("unused")
     public int multiply(int multiplicand, int multiplier) {
         int positiveMultiplicand = multiplicand;
         int negativeMultiplicand = -multiplicand;
