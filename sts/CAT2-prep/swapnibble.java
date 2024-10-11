@@ -1,4 +1,4 @@
-public class swapnibble {
+public class swapnibble {//done
     public static byte swap(byte x){
         byte left=(byte)((x & 0xF0)>>4);
         byte right=(byte)((x & 0x0F));
