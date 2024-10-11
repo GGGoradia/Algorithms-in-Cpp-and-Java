@@ -1,4 +1,3 @@
-import java.util.*;
 public class longestseqof1s {
     public static int longseq(int x){
         int prev=0;

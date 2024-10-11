@@ -1,5 +1,3 @@
-import java.util.*; 
-  
 class karatsubaasdw{ 
   
     // Find the maximum possible sum in arr[] 

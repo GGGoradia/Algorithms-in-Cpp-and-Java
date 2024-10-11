@@ -1,4 +1,3 @@
-import java.util.*;
 public class euclids {
     public static int gcd(int a,int b){
         if(b==0){
