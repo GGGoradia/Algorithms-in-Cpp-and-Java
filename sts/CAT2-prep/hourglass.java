@@ -1,5 +1,5 @@
 import java.util.*;
-public class Solution {
+public class hourglass {
     public static int hover(int r,int c, List<List<Integer>>Mat){
         int sum=Mat.get(r+1).get(c+1);
         for(int i=0;i<3;i++){
