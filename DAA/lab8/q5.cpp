@@ -18,3 +18,27 @@ vector<pair<int, int>> stringMatching2D(const vector<vector<char>>& T, const vec
             if (match2D(T, P, i, j)) matches.push_back({i, j});
     return matches;
 }
+
+int main() {
+    vector<vector<char>> T = {
+        {'a', 'b', 'a', 'b'},
+        {'b', 'a', 'b', 'a'},
+        {'a', 'b', 'a', 'b'},
+        {'b', 'a', 'b', 'a'}
+    };
+
+    vector<vector<char>> P = {
+        {'a', 'b'},
+        {'b', 'a'}
+    };
+
+    vector<pair<int, int>> matches = stringMatching2D(T, P);
+
+    cout << "Pattern found at positions: ";
+    for (auto match : matches) {
+        cout << "(" << match.first << ", " << match.second << ") ";
+    }
+    cout << endl;
+
+    return 0;
+}
