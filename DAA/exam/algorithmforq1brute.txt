@@ -1,0 +1,18 @@
+Algorithm maxSubarraySumBruteForce(A, n)
+{
+    for each row in A
+    {
+        maxSum = -∞
+        for i = 0 to n-1
+        {
+            currentSum = 0
+            for j = i to n-1
+            {
+                currentSum = currentSum + A[row][j]
+                if currentSum > maxSum then
+                    maxSum = currentSum
+            }
+        }
+        print "Maximum subarray sum for row", row + 1, ":", maxSum
+    }
+}

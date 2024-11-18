@@ -1,0 +1,16 @@
+Algorithm maxSubarraySumKadane(A, n)
+{
+    for each row in A
+    {
+        currentSum = A[row][0]
+        maxSum = A[row][0]
+
+        for i = 1 to n-1
+        {
+            currentSum = max(A[row][i], currentSum + A[row][i])
+            if currentSum > maxSum then
+                maxSum = currentSum
+        }
+        print "Maximum subarray sum for row", row + 1, ":", maxSum
+    }
+}
